@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BNRCourcesViewControllerTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    BNRCourcesViewControllerTableViewController *cvc = [[BNRCourcesViewControllerTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    
+    UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
+    
+    self.window.rootViewController = masterNav;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     // Override point for customization after application launch.
     return YES;
 }
