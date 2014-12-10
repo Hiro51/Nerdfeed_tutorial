@@ -11,17 +11,21 @@
 @interface BNRCourcesViewControllerTableViewController ()
 
 @property (nonatomic) NSURLSession *session;
+@property (nonatomic, copy) NSArray *courses;
 
 @end
 
 @implementation BNRCourcesViewControllerTableViewController
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return [self.courses count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    NSDictionary *course = self.courses[indexPath.row];
+    cell.textLabel.text = course[@"title"];
+    return cell;
 }
 
 - (instancetype)initWithStyle:(UITableViewStyle)style {
@@ -42,9 +46,19 @@
     
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"%@", jsonObject);
+        self.courses = jsonObject[@"courses"];
+        NSLog(@"%@", self.courses);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }];
     [dataTask resume];
+}
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 @end
