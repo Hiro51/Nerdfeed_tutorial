@@ -13,6 +13,7 @@
 		455023BB1A381B8700001A94 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 455023B91A381B8700001A94 /* LaunchScreen.xib */; };
 		455023C71A381B8700001A94 /* Nerdfeed_tutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 455023C61A381B8700001A94 /* Nerdfeed_tutorialTests.m */; };
 		455023D51A38211500001A94 /* BNRCourcesViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455023D41A38211500001A94 /* BNRCourcesViewControllerTableViewController.m */; };
+		455023D81A38423700001A94 /* BNRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 455023D71A38423700001A94 /* BNRWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		455023C61A381B8700001A94 /* Nerdfeed_tutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Nerdfeed_tutorialTests.m; sourceTree = "<group>"; };
 		455023D31A38211500001A94 /* BNRCourcesViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRCourcesViewControllerTableViewController.h; sourceTree = "<group>"; };
 		455023D41A38211500001A94 /* BNRCourcesViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRCourcesViewControllerTableViewController.m; sourceTree = "<group>"; };
+		455023D61A38423700001A94 /* BNRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRWebViewController.h; sourceTree = "<group>"; };
+		455023D71A38423700001A94 /* BNRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				455023AF1A381B8600001A94 /* AppDelegate.m */,
 				455023D31A38211500001A94 /* BNRCourcesViewControllerTableViewController.h */,
 				455023D41A38211500001A94 /* BNRCourcesViewControllerTableViewController.m */,
+				455023D61A38423700001A94 /* BNRWebViewController.h */,
+				455023D71A38423700001A94 /* BNRWebViewController.m */,
 				455023B71A381B8700001A94 /* Images.xcassets */,
 				455023B91A381B8700001A94 /* LaunchScreen.xib */,
 				455023AA1A381B8600001A94 /* Supporting Files */,
@@ -215,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455023D81A38423700001A94 /* BNRWebViewController.m in Sources */,
 				455023B01A381B8600001A94 /* AppDelegate.m in Sources */,
 				455023AD1A381B8600001A94 /* main.m in Sources */,
 				455023D51A38211500001A94 /* BNRCourcesViewControllerTableViewController.m in Sources */,

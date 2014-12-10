@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BNRCourcesViewControllerTableViewController.h"
+#import "BNRWebViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,9 @@
     BNRCourcesViewControllerTableViewController *cvc = [[BNRCourcesViewControllerTableViewController alloc] initWithStyle:UITableViewStylePlain];
     
     UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:cvc];
+    
+    BNRWebViewController *wvc = [[BNRWebViewController alloc] init];
+    cvc.webViewController = wvc;
     
     self.window.rootViewController = masterNav;
     
